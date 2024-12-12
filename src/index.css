@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    @apply antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-inter tracking-tight;
+  }
+}
+
+@layer components {
+  .app-scrollbar {
+    @apply scrollbar-thin scrollbar-track-transparent scrollbar-thumb-primary/30 hover:scrollbar-thumb-primary/50;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-track-transparent::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thumb-primary\/30::-webkit-scrollbar-thumb {
+    background-color: rgb(210 73 42 / 0.3);
+    border-radius: 3px;
+  }
+
+  .scrollbar-thumb-primary\/50::-webkit-scrollbar-thumb {
+    background-color: rgb(210 73 42 / 0.5);
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+}

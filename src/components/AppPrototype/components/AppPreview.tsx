@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
-import { AppStateProvider } from '../providers/AppStateProvider';
 import { Header } from './header/Header';
 import { MainContent } from './content/MainContent';
 import { NavigationBar } from './navigation/NavigationBar';
+import { AppStateProvider } from '../providers/AppStateProvider';
 
-export function AppPreview() {
+function AppPreview() {
   return (
     <div className="max-w-sm mx-auto relative">
       <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-[3.5rem] blur-xl opacity-50" />
@@ -22,5 +22,4 @@ export function AppPreview() {
   );
 }
 
-// Default export for dynamic import
 export default AppPreview;

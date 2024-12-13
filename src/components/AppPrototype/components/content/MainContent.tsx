@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { ContentView } from './ContentView';
+import React from "react";
+import { ContentView } from "./ContentView";
 
 export function MainContent() {
   return (
-    <div className="bg-background-light/5 h-[400px] overflow-y-auto app-scrollbar">
+    <div className="bg-[#EDEFEF] h-[400px] overflow-y-auto app-scrollbar">
       <ContentView />
     </div>
   );

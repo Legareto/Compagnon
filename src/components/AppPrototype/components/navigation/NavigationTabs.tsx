@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { LayoutGrid, Briefcase, CreditCard, FolderOpen, Menu } from 'lucide-react';
-import { TabItem } from './TabItem';
-import { AppPage } from '../../types';
+import React from "react";
+import { Gauge, Briefcase, Contact, FolderOpen, Menu } from "lucide-react";
+import { TabItem } from "./TabItem";
+import { AppPage } from "../../types";
 
 interface NavigationTabsProps {
   currentPage: AppPage;
@@ -11,14 +11,17 @@ interface NavigationTabsProps {
 }
 
 const tabs = [
-  { id: 'dashboard', icon: LayoutGrid, label: 'Tableau' },
-  { id: 'toolkit', icon: Briefcase, label: 'Trousse' },
-  { id: 'card', icon: CreditCard, label: 'Carte' },
-  { id: 'folder', icon: FolderOpen, label: 'Dossier' },
-  { id: 'menu', icon: Menu, label: 'Menu' }
+  { id: "dashboard", icon: Gauge, label: "Tableau" },
+  { id: "toolkit", icon: Briefcase, label: "Trousse" },
+  { id: "folder", icon: FolderOpen, label: "Dossier" },
+  { id: "card", icon: Contact, label: "Carte" },
+  { id: "menu", icon: Menu, label: "Menu" },
 ] as const;
 
-export function NavigationTabs({ currentPage, onNavigate }: NavigationTabsProps) {
+export function NavigationTabs({
+  currentPage,
+  onNavigate,
+}: NavigationTabsProps) {
   return (
     <div className="flex justify-between items-center px-4 py-2">
       {tabs.map(({ id, icon, label }) => (

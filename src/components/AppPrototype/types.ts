@@ -1,3 +1,10 @@
+export interface AppStateContextType {
+  messages: ReturnType<typeof useMessages>;
+  navigation: ReturnType<typeof useNavigation>;
+  sessions: ReturnType<typeof useSessions>;
+  notifications: ReturnType<typeof useNotifications>;
+}
+
 export interface Message {
   id: string;
   title: string;
@@ -16,4 +23,4 @@ export interface Course {
   name: string;
 }
 
-export type AppPage = 'dashboard' | 'toolkit' | 'folder' | 'card' | 'menu';
+export type AppPage = "dashboard" | "toolkit" | "folder" | "card" | "menu";

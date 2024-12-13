@@ -1,35 +1,55 @@
-import { Bell, MessageCircle, Briefcase, CreditCard, Printer } from 'lucide-react';
-import { Feature } from '../types';
+import {
+  BellDot,
+  MessageCircle,
+  Briefcase,
+  Printer,
+  Contact,
+  BellRing,
+  BotMessageSquare,
+} from "lucide-react";
+import { Feature } from "../types";
 
 export const features: Feature[] = [
   {
-    icon: Bell,
+    icon: BellDot,
     title: "Notifications",
-    description: "Consultez les notifications liées à votre dossier académique et à vos cours."
+    description:
+      "Consulte les notifications liées à ton dossier académique et à tes cours.",
   },
   {
     icon: MessageCircle,
     title: "Messages importants",
-    description: "Consultez les messages importants de votre domaine d'études et de l'institution."
+    description:
+      "Consulte les messages importants de ton domaine d'études et de l'institution.",
   },
   {
     icon: Briefcase,
     title: "Trousse étudiante",
-    description: "Accédez rapidement à la trousse étudiante qui regroupe plusieurs ressources pour vous accompagner et vous soutenir."
+    description:
+      "Consulte rapidement la trousse étudiante qui regroupe plusieurs ressources de soutien pédagogique, numérique et psychosocial.",
   },
   {
-    icon: CreditCard,
+    icon: Contact,
     title: "Carte numérique",
-    description: "Utilisez votre carte numérique pour obtenir des services (bibliothèque, salle de sport, etc.) ou des rabais (autobus, cinéma, etc.)."
+    description:
+      "Utilise ta carte numérique pour obtenir des services (bibliothèque, salle de sport, etc.) et des rabais (autobus, cinéma, etc.).",
   },
   {
     icon: Printer,
     title: "Solde d'impression",
-    description: "Vérifiez votre solde d'impression et ajouter des fonds sur votre compte."
+    description:
+      "Vérifie ton solde d'impression et ajoute des fonds sur ton compte avant d'imprimer tes textes à lire ou tes travaux.",
   },
   {
-    icon: Bell,
+    icon: BellRing,
     title: "Rappels personnalisés (plus tard)",
-    description: "Ne manquez plus jamais un cours, un devoir ou une date importante grâce aux rappels intelligents et personnalisés."
-  }
+    description:
+      "Ne manque plus jamais un cours, un devoir ou une date importante grâce aux rappels intelligents et personnalisés selon tes préférences.",
+  },
+  {
+    icon: BotMessageSquare,
+    title: "Compagnon intelligent (plus tard)",
+    description:
+      "Un compagnon d'étude intelligent qui répond à tes questions et qui t'aide à planifier ton temps et tes séances d'études.",
+  },
 ];

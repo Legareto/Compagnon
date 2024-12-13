@@ -1,6 +1,6 @@
-import React from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Course } from './types';
+import React from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Course } from "./types";
 
 interface CourseSelectorProps {
   currentCourse: Course;
@@ -8,10 +8,14 @@ interface CourseSelectorProps {
   onNext: () => void;
 }
 
-export function CourseSelector({ currentCourse, onPrevious, onNext }: CourseSelectorProps) {
+export function CourseSelector({
+  currentCourse,
+  onPrevious,
+  onNext,
+}: CourseSelectorProps) {
   return (
     <div className="flex items-center justify-between bg-background/50 p-2 rounded-lg mb-4">
-      <button 
+      <button
         onClick={onPrevious}
         className="p-1 hover:bg-primary/10 rounded-full transition-colors"
       >
@@ -21,7 +25,7 @@ export function CourseSelector({ currentCourse, onPrevious, onNext }: CourseSele
         <div className="text-sm text-light/70">{currentCourse.session}</div>
         <div className="text-light font-medium">{currentCourse.name}</div>
       </div>
-      <button 
+      <button
         onClick={onNext}
         className="p-1 hover:bg-primary/10 rounded-full transition-colors"
       >

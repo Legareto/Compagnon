@@ -1,11 +1,12 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { BetaButton } from './BetaButton';
+import React from "react";
+import { BetaButton } from "./BetaButton";
 
 export function BetaSection() {
   const handleBetaSignup = React.useCallback(() => {
-    window.location.href = 'mailto:beta@compagnon-etudes.com?subject=Inscription%20Beta&body=Je%20souhaite%20participer%20à%20la%20beta%20de%20Compagnon%20d\'études.';
+    window.location.href =
+      "mailto:projetsymbiose@uqat.ca?subject=Inscription%20Beta&body=Je%20souhaite%20participer%20à%20la%20beta%20du%20Compagnon%20d'études.";
   }, []);
 
   return (
@@ -13,10 +14,12 @@ export function BetaSection() {
       <div className="container mx-auto px-6">
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight mb-4 text-light">
-            Rejoignez la Beta
+            Rejoignez la bêta
           </h2>
           <p className="text-light/70 max-w-2xl mx-auto mb-12 font-inter">
-            Participez au développement du compagnon d'études et obtenez un accès anticipé à l'application mobile Symbiose.
+            Participe au développement du compagnon d'études en t'inscrivant à
+            la bêta fermée et obtient ainsi un accès anticipé à l'application
+            mobile du Compagnon d'études Symbiose.
           </p>
           <BetaButton onClick={handleBetaSignup} />
         </div>

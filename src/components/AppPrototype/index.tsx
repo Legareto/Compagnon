@@ -1,10 +1,9 @@
-import React from 'react';
-import dynamic from 'next/dynamic';
+import React from "react";
+import dynamic from "next/dynamic";
 
-const AppPreview = dynamic(
-  () => import('./components/AppPreview').then(mod => mod.AppPreview),
-  { ssr: false }
-);
+const AppPreview = dynamic(() => import("./components/AppPreview"), {
+  ssr: false,
+});
 
 export function AppPrototype() {
   return (
@@ -14,7 +13,8 @@ export function AppPrototype() {
           Découvrez l'interface du compagnon d'études
         </h2>
         <p className="text-[#27282B]/70 text-center mb-16 max-w-2xl mx-auto font-inter">
-          Explorez l'interface intuitive et découvrez comment le compagnon d'études simplifie votre vie étudiante
+          Explore l'interface intuitive et découvre comment le compagnon
+          d'études simplifie et facilite ta vie étudiante.
         </p>
         <AppPreview />
       </div>

@@ -1,10 +1,12 @@
+'use client';
+
 import React from 'react';
 import { BetaButton } from './BetaButton';
 
 export function BetaSection() {
-  const handleBetaSignup = () => {
+  const handleBetaSignup = React.useCallback(() => {
     window.location.href = 'mailto:beta@compagnon-etudes.com?subject=Inscription%20Beta&body=Je%20souhaite%20participer%20à%20la%20beta%20de%20Compagnon%20d\'études.';
-  };
+  }, []);
 
   return (
     <section id="beta" className="py-20 bg-[#27282B]/95">

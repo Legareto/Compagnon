@@ -1,16 +1,17 @@
+'use client';
+
 import React from 'react';
-import { AppPage } from '../types';
+import { useAppState } from '../providers/AppStateProvider';
 import { DashboardView } from './views/DashboardView';
 import { ToolkitView } from './views/ToolkitView';
 import { CardView } from './views/CardView';
 import { FolderView } from './views/FolderView';
 import { MenuView } from './views/MenuView';
 
-interface MainContentProps {
-  currentPage: AppPage;
-}
+export function MainContent() {
+  const { navigation } = useAppState();
+  const { currentPage } = navigation;
 
-export function MainContent({ currentPage }: MainContentProps) {
   return (
     <div className="bg-background-light/5 h-[400px] overflow-y-auto app-scrollbar">
       <div className="p-4">

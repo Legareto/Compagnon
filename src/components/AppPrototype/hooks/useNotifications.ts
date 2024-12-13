@@ -1,10 +1,7 @@
-import { useState } from 'react';
+'use client';
 
-interface Notification {
-  id: string;
-  title: string;
-  time: string;
-}
+import { useState } from 'react';
+import { Notification } from '../types';
 
 const initialNotifications: Notification[] = [
   {

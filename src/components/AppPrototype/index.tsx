@@ -1,5 +1,10 @@
 import React from 'react';
-import { AppPreview } from './components/AppPreview';
+import dynamic from 'next/dynamic';
+
+const AppPreview = dynamic(
+  () => import('./components/AppPreview').then(mod => mod.AppPreview),
+  { ssr: false }
+);
 
 export function AppPrototype() {
   return (

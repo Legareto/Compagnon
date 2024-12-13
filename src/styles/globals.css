@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 3% 16%;
+    --background-dark: 220 4% 11%;
+    --background-light: 200 6% 93%;
+    --primary: 12 75% 49%;
+    --light: 200 6% 93%;
+    --accent: 12 95% 61%;
+  }
+
+  body {
+    @apply text-light bg-background;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight font-medium;
+  }
+}
+
+@layer components {
+  .app-scrollbar {
+    @apply scrollbar-thin scrollbar-track-transparent scrollbar-thumb-primary/30 hover:scrollbar-thumb-primary/50;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-track-transparent::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thumb-primary\/30::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--primary) / 0.3);
+    border-radius: 3px;
+  }
+
+  .scrollbar-thumb-primary\/50::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--primary) / 0.5);
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+}

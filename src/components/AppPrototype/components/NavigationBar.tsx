@@ -1,64 +1,35 @@
+'use client';
+
 import React from 'react';
-import { LayoutGrid, Briefcase, FolderOpen, CreditCard, Menu } from 'lucide-react';
-import { AppPage } from '../types';
+import { LayoutGrid, Briefcase, CreditCard, Menu } from 'lucide-react';
+import { useAppState } from '../providers/AppStateProvider';
 
-interface NavItemProps {
-  icon: React.ElementType;
-  label: string;
-  isActive?: boolean;
-  onClick?: () => void;
-}
+export function NavigationBar() {
+  const { navigation } = useAppState();
+  const { currentPage, navigateTo } = navigation;
 
-interface NavigationBarProps {
-  currentPage: AppPage;
-  onNavigate: (page: AppPage) => void;
-}
+  const tabs = [
+    { id: 'dashboard', icon: LayoutGrid, label: 'Tableau' },
+    { id: 'toolkit', icon: Briefcase, label: 'Trousse' },
+    { id: 'card', icon: CreditCard, label: 'Carte' },
+    { id: 'folder', icon: Menu, label: 'Dossier' },
+    { id: 'menu', icon: Menu, label: 'Menu' }
+  ];
 
-function NavItem({ icon: Icon, label, isActive, onClick }: NavItemProps) {
-  return (
-    <button 
-      onClick={onClick}
-      className={`flex flex-col items-center p-2 ${isActive ? 'text-primary' : 'text-[#EDEFEF]/70'}`}
-    >
-      <Icon className="w-5 h-5 mb-1" />
-      <span className="text-xs">{label}</span>
-    </button>
-  );
-}
-
-export function NavigationBar({ currentPage, onNavigate }: NavigationBarProps) {
   return (
     <div className="flex justify-between items-center px-4 py-2 border-t border-primary/20 bg-[#27282B]">
-      <NavItem 
-        icon={LayoutGrid} 
-        label="Tableau" 
-        isActive={currentPage === 'dashboard'}
-        onClick={() => onNavigate('dashboard')}
-      />
-      <NavItem 
-        icon={Briefcase} 
-        label="Trousse" 
-        isActive={currentPage === 'toolkit'}
-        onClick={() => onNavigate('toolkit')}
-      />
-      <NavItem 
-        icon={FolderOpen} 
-        label="Dossier" 
-        isActive={currentPage === 'folder'}
-        onClick={() => onNavigate('folder')}
-      />
-      <NavItem 
-        icon={CreditCard} 
-        label="Carte" 
-        isActive={currentPage === 'card'}
-        onClick={() => onNavigate('card')}
-      />
-      <NavItem 
-        icon={Menu} 
-        label="Menu" 
-        isActive={currentPage === 'menu'}
-        onClick={() => onNavigate('menu')}
-      />
+      {tabs.map(({ id, icon: Icon, label }) => (
+        <button
+          key={id}
+          onClick={() => navigateTo(id as any)}
+          className={`flex flex-col items-center p-2 ${
+            currentPage === id ? 'text-primary' : 'text-[#EDEFEF]/70'
+          }`}
+        >
+          <Icon className="w-5 h-5 mb-1" />
+          <span className="text-xs">{label}</span>
+        </button>
+      ))}
     </div>
   );
 }

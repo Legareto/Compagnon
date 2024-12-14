@@ -3,12 +3,12 @@ import { Smartphone, Menu } from "lucide-react";
 
 export function Navbar() {
   return (
-    <nav className="bg-white font-inter fixed w-full z-50 border-b border-primary/20 shadow-lg">
+    <nav className="bg-white font-inter fixed w-full z-[999] border-b border-primary/20 shadow-lg">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <Smartphone className="w-8 h-8 text-primary" />
           <span className="text-xl font-bold text-black underline decoration-primary decoration-2">
-            <a href="/">Compagnon d'études</a>
+            <a href="/">Compagnon d&apos;études</a>
           </span>
         </div>
         <div className="hidden md:flex space-x-12">
@@ -22,7 +22,7 @@ export function Navbar() {
             href="#interface"
             className="text-black font-bold hover:text-primary underline underline-offset-4 decoration-2 transition-colors"
           >
-            L'interface
+            L&apos;interface
           </a>
           <a
             href="#beta"

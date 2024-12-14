@@ -1,24 +1,24 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Notification } from '../types';
+import { useState } from "react";
+import { Notification } from "../types";
 
 const initialNotifications: Notification[] = [
   {
-    id: '1',
-    title: 'Vous avez un avis sécurisé à votre dossier',
-    time: 'Il y a 2 heures'
+    id: "1",
+    title: "Vous avez un avis sécurisé à votre dossier",
+    time: "Il y a 2 heures",
   },
   {
-    id: '2',
-    title: 'Vous avez un nouveau résultat dans le cours ERR404',
-    time: 'Il y a 3 heures'
+    id: "2",
+    title: "Vous avez un nouveau résultat dans le cours ERR404",
+    time: "Il y a 3 heures",
   },
   {
-    id: '3',
-    title: 'Rappel : Remise du devoir de mathématiques demain',
-    time: 'Il y a 5 heures'
-  }
+    id: "3",
+    title: "Rappel : Remise du devoir de mathématiques demain",
+    time: "Il y a 5 heures",
+  },
 ];
 
 export function useNotifications() {
@@ -26,6 +26,6 @@ export function useNotifications() {
 
   return {
     notifications,
-    count: notifications.length
+    count: notifications.length,
   };
 }

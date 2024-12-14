@@ -37,11 +37,11 @@ export function Hero() {
             </span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6 text-primary">
-            <span className="text-light">Compagnon d'études</span> Symbiose
+            <span className="text-light">Compagnon d&apos;études</span> Symbiose
           </h1>
           <p className="text-xl text-light/70 mb-8 font-inter">
             Une application intuitive qui intègre ton expérience étudiante
-            universitaire et qui t'accompagne vers ta réussite.
+            universitaire et qui t&apos;accompagne vers ta réussite.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <button className="group flex items-center justify-center gap-2 bg-primary hover:bg-black/60 text-light px-8 py-3 rounded-lg font-semibold transition-colors">

@@ -5,16 +5,18 @@ export function ToolkitView() {
     <div className="space-y-4 font-inter">
       <h2 className="text-xl font-bold text-[#128DB9]">Trousse étudiante</h2>
       <div className="bg-[#27282B]/30 p-4 rounded-lg space-y-4">
-        <h3 className="text-[#000000] font-semibold">Bienvenue à l'UQAT</h3>
+        <h3 className="text-[#000000] font-semibold">
+          Bienvenue à l&apos;UQAT
+        </h3>
         <p className="text-[#000000]/80 leading-relaxed">
-          Voici une trousse d'accueil pour bien vous accompagner en ce début de
-          parcours universitaire. Elle contient une foule d'informations utiles,
-          prenez le temps de la consulter!
+          Voici une trousse d&apos;accueil pour bien vous accompagner en ce
+          début de parcours universitaire. Elle contient une foule
+          d&apos;informations utiles, prenez le temps de la consulter!
         </p>
         <p className="text-[#000000]/80 leading-relaxed">
-          N'oubliez pas, plusieurs services sont disponibles pour vous soutenir
-          et vous accompagner dans votre cheminement, n'hésitez pas à
-          communiquer avec nous.
+          N&apos;oubliez pas, plusieurs services sont disponibles pour vous
+          soutenir et vous accompagner dans votre cheminement, n&apos;hésitez
+          pas à communiquer avec nous.
         </p>
         <p className="text-black font-medium">Bonne session!</p>
       </div>
@@ -28,7 +30,7 @@ export function ToolkitView() {
           <ul className="space-y-3 text-[#000000]/80">
             <li>• Service aux étudiants</li>
             <li>• Bibliothèque</li>
-            <li>• Centre d'aide à la réussite</li>
+            <li>• Centre d&apos;aide à la réussite</li>
             <li>• Services informatiques</li>
             <li>• Services financiers</li>
           </ul>
@@ -39,7 +41,7 @@ export function ToolkitView() {
         </h3>
         <div className="bg-[#27282B]/30 p-4 rounded-lg">
           <ul className="space-y-3 text-[#000000]/80">
-            <li>• Guide de l'étudiant</li>
+            <li>• Guide de l&apos;étudiant</li>
             <li>• Calendrier universitaire</li>
             <li>• Plan du campus</li>
             <li>• Règlements et politiques</li>

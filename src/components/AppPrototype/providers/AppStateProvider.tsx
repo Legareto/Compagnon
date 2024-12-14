@@ -1,11 +1,13 @@
+// src/components/AppPrototype/providers/AppStateProvider.tsx
+
 "use client";
 
-import React, { createContext, useContext, ReactNode } from "react";
+import React, { createContext, useContext, ReactNode, useMemo } from "react";
 import { useMessages } from "../hooks/useMessages";
 import { useNavigation } from "../hooks/useNavigation";
 import { useSessions } from "../hooks/useSessions";
 import { useNotifications } from "../hooks/useNotifications";
-import type { AppStateContextType } from "../types";
+import type { AppStateContextType } from "../types/index";
 
 const AppStateContext = createContext<AppStateContextType | null>(null);
 
@@ -15,7 +17,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   const sessions = useSessions();
   const notifications = useNotifications();
 
-  const value = React.useMemo(
+  const value: AppStateContextType = useMemo(
     () => ({
       messages,
       navigation,

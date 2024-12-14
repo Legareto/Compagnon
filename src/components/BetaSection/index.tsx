@@ -17,9 +17,10 @@ export function BetaSection() {
             Rejoignez la bêta
           </h2>
           <p className="text-light/70 max-w-2xl mx-auto mb-12 font-inter">
-            Participe au développement du compagnon d'études en t'inscrivant à
-            la bêta fermée et obtient ainsi un accès anticipé à l'application
-            mobile du Compagnon d'études Symbiose.
+            Participe au développement du compagnon d&apos;études en
+            t&apos;inscrivant à la bêta fermée et obtient ainsi un accès
+            anticipé à l&apos;application mobile du Compagnon d&apos;études
+            Symbiose.
           </p>
           <BetaButton onClick={handleBetaSignup} />
         </div>

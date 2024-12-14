@@ -13,30 +13,33 @@ export interface MessagesType {
   toggleMessage: (id: string) => void;
 }
 
-// Define types for Navigation
-export interface NavigationType {
-  currentRoute: string;
-  navigate: (route: string) => void;
+// Define types for Courses and Sessions
+export interface Course {
+  id: string;
+  name: string;
+  session: string;
 }
 
-// Define types for Sessions
 export interface Session {
   id: string;
   name: string;
   courses: Course[];
 }
 
-export interface Course {
-  id: string;
-  name: string;
-}
-
 export interface SessionsType {
-  sessions: Session[];
-  // Add other relevant methods or properties if needed
+  currentSession: Session;
+  currentCourse: Course;
+  nextSession: () => void;
+  previousSession: () => void;
 }
 
 // Define types for Notifications
+export interface Notification {
+  id: string;
+  title: string;
+  time: string;
+}
+
 export interface NotificationItem {
   id: string;
   message: string;
@@ -47,6 +50,12 @@ export interface NotificationsType {
   notifications: NotificationItem[];
   addNotification: (notification: NotificationItem) => void;
   markAsRead: (id: string) => void;
+}
+
+// Define types for Navigation
+export interface NavigationType {
+  currentPage: AppPage;
+  navigateTo: (page: AppPage) => void;
 }
 
 // Define AppStateContextType using explicit types

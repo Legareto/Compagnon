@@ -1,6 +1,6 @@
 import React from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Course } from "./types";
+import { Course } from "./types/index";
 
 interface CourseSelectorProps {
   currentCourse: Course;

@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { AppPage } from '../types';
+import { useState } from "react";
+import type { AppPage, NavigationType } from "../types";
 
-export function useNavigation() {
-  const [currentPage, setCurrentPage] = useState<AppPage>('dashboard');
+export function useNavigation(): NavigationType {
+  const [currentPage, setCurrentPage] = useState<AppPage>("dashboard"); // Default page
 
   const navigateTo = (page: AppPage) => {
     setCurrentPage(page);
@@ -12,6 +12,6 @@ export function useNavigation() {
 
   return {
     currentPage,
-    navigateTo
+    navigateTo,
   };
 }

@@ -16,10 +16,12 @@ export function Header() {
     <div className="p-4 bg-[#27282B] font-inter">
       <div className="flex items-center justify-between mb-4">
         <ProfileButton onClick={() => setIsProfileOpen(true)} />
-        <h3 className="text-primary font-bold text-lg">Compagnon d'études</h3>
+        <h3 className="text-primary font-bold text-lg">
+          Compagnon d&apos;études
+        </h3>
         <NotificationButton
           onClick={() => setIsNotificationsOpen(true)}
-          count={notifications.count}
+          count={notifications.notifications.length}
         />
       </div>
       <p className="text-[#F5F6F6] text-lg">

@@ -6,27 +6,27 @@ const sessions: Session[] = [
     id: "1",
     name: "Session automne 2024",
     courses: [
-      { id: "1", name: "Mathématiques avancées" },
-      { id: "2", name: "Physique quantique" },
-      { id: "3", name: "Chimie organique" },
+      { id: "1", name: "Mathématiques avancées", session: "1" },
+      { id: "2", name: "Physique quantique", session: "1" },
+      { id: "3", name: "Chimie organique", session: "1" },
     ],
   },
   {
     id: "2",
     name: "Session hiver 2025",
     courses: [
-      { id: "4", name: "Calcul différentiel" },
-      { id: "5", name: "Mécanique des fluides" },
-      { id: "6", name: "Biologie moléculaire" },
+      { id: "4", name: "Calcul différentiel", session: "2" },
+      { id: "5", name: "Mécanique des fluides", session: "2" },
+      { id: "6", name: "Biologie moléculaire", session: "2" },
     ],
   },
   {
     id: "3",
     name: "Session été 2025",
     courses: [
-      { id: "7", name: "Algèbre linéaire" },
-      { id: "8", name: "Thermodynamique" },
-      { id: "9", name: "Génétique" },
+      { id: "7", name: "Algèbre linéaire", session: "3" },
+      { id: "8", name: "Thermodynamique", session: "3" },
+      { id: "9", name: "Génétique", session: "3" },
     ],
   },
 ];

@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { useAppState } from '../../providers/AppStateProvider';
-import { NavigationTabs } from './NavigationTabs';
+import React from "react";
+import { useAppState } from "../../providers/AppStateProvider";
+import { NavigationTabs } from "./NavigationTabs";
 
 export function NavigationBar() {
   const { navigation } = useAppState();
@@ -10,10 +10,7 @@ export function NavigationBar() {
 
   return (
     <div className="border-t border-primary/20 bg-[#27282B]">
-      <NavigationTabs 
-        currentPage={currentPage}
-        onNavigate={navigateTo}
-      />
+      <NavigationTabs currentPage={currentPage} onNavigate={navigateTo} />
     </div>
   );
 }
